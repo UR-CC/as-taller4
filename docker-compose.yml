@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   frontend:
     build: ./frontend
@@ -20,7 +18,7 @@ services:
       - auth-service
     # Aquí puedes agregar los otros servicios base
 
-  # Microservicio de Autenticación
+    # Microservicio de Autenticación
   auth-service:
     build: ./services/authentication
     container_name: auth-service
@@ -41,34 +39,77 @@ services:
       - auth_data:/data/db
 
   # --- Plantillas de Microservicios ---
-  # TODO: Copiar y modificar "service1" para cada servicio según el tema seleccionado
-  
-  # Microservicio de Nombre_del_microservicio
-  service1-service:
-     build: ./services/service1 
-     container_name: service1-service
-     ports:
-       - "8002:8002"
-     environment:
-       - DATABASE_URL=postgresql://user:password@service1-db:5432/service1_db
-     depends_on:
-       - service1-db
+  # Microservicio de Métricas
+  metricas-service:
+    build: ./services/metricas
+    container_name: metricas-service
+    ports:
+      - "8002:8002"
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_DB}:5432/${POSTGRES_DB}
+    depends_on:
+      - metricas-db
+  # Base de datos para el Microservicio de Métricas
+  metricas-db:
+    image: postgres
+    container_name: metricas-db
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - metricas_data:/var/lib/postgresql/data
+      
+  # Microservicio de Análisis
+  analisis-service:
+    build: ./services/analisis
+    container_name: analisis-service
+    ports:
+      - "8002:8002"
+    environment:
+      - DATABASE_URL=postgresql://user:password@analisis-db:5432/analisis_db
+    depends_on:
+      - analisis-db
 
-  # Base de datos para el servicio1
-  service1-db:
-     image: postgres:latest
-     container_name: service1-db
-     environment:
-       - POSTGRES_USER=user
-       - POSTGRES_PASSWORD=password
-       - POSTGRES_DB=service1_db
-     ports:
-       - "5432:5432"
-     volumes:
-       - service1_data:/var/lib/postgresql/data
+  # Base de datos para el Microservicio de Análisis
+  analisis-db:
+    image: postgres
+    container_name: analisis-db
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=analisis_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - analisis_data:/var/lib/postgresql/data
+
+  # Microservicio de Alertas
+  alertas-service:
+    build: ./services/alertas
+    container_name: alertas-service
+    ports:
+      - "8002:8002"
+    environment:
+      - DATABASE_URL=postgresql://user:password@alertas-db:5432/alertas_db
+    depends_on:
+      - alertas-db
+
+  # Base de datos para el Microservicio de Alertas
+  alertas-db:
+    image: redis
+    container_name: alertas-db
+    environment:
+      - REDIS_PASSWORD=password
+    ports:
+      - "6379:6379"
+    volumes:
+      - alertas_data:/var/lib/postgresql/data
 
 volumes:
   auth_data:
   service1_data:
-  # agregar volúmenes para los otros 2 microservicios
-
+  metricas_data:
+  analisis_data:
