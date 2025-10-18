@@ -55,6 +55,26 @@ Este proyecto consiste en una aplicación para que usuarios puedan registrar, an
 
 Este proyecto plantea una plataforma digital para la compra y venta de productos de segunda mano, enfocada en la confianza entre compradores y vendedores. El microservicio de **autenticación** gestiona perfiles de usuarios, diferenciando compradores y vendedores; el microservicio de **productos** organiza listados y categorías; el microservicio de **transacciones** administra el proceso de compra-venta y el envío de productos; y el microservicio de **valoraciones** refuerza la reputación de los usuarios a través de comentarios y calificaciones. El uso de MongoDB y PostgreSQL asegura la flexibilidad necesaria para gestionar publicaciones variadas, junto con la estabilidad y seguridad que requieren las transacciones comerciales.
 
+### 11. Plataforma de Gestión de Eventos Corporativos
+
+Este proyecto propone un sistema integral para la planificación y ejecución de eventos corporativos, facilitando la coordinación entre organizadores, proveedores y participantes. El sistema incluye un microservicio de autenticación que gestiona los diferentes perfiles de usuario (organizadores, proveedores, asistentes); un microservicio de eventos que centraliza la información de conferencias, talleres y agendas; un microservicio de proveedores que administra servicios de catering, logística y equipamiento; y finalmente un microservicio de inscripciones que gestiona el registro de participantes y la emisión de credenciales. La combinación de PostgreSQL, MongoDB y Redis asegura un manejo eficiente de datos transaccionales y contenido dinámico.
+
+### 12. Sistema de Monitoreo Agrícola Inteligente
+
+Este sistema está diseñado para optimizar la producción agrícola mediante el monitoreo en tiempo real de cultivos y condiciones ambientales. A través de un microservicio de autenticación, se gestiona el acceso de agricultores, técnicos y administradores; el microservicio de cultivos organiza la información de parcelas, variedades y ciclos de producción; el microservicio de sensores recoge y procesa datos de humedad, temperatura y nutrientes del suelo; y el microservicio de riego automatizado controla los sistemas de irrigación basándose en análisis predictivos. La infraestructura combina PostgreSQL para datos maestros, MongoDB para información de sensores y Redis para comandos en tiempo real.
+
+### 13. Plataforma de Turismo Local
+
+Este proyecto plantea un marketplace especializado en experiencias turísticas locales, conectando viajeros con guías y proveedores de servicios auténticos. El microservicio de autenticación permite distinguir entre turistas, guías locales y administradores; el microservicio de experiencias organiza tours, actividades y paquetes personalizados; el microservicio de reservas gestiona la disponibilidad y confirmación de experiencias; y el microservicio de valoraciones recopila y muestra opiniones y calificaciones de los usuarios. El uso de PostgreSQL y MongoDB garantiza la gestión confiable de reservas junto con la flexibilidad para catalogar experiencias diversas.
+
+### 14. Sistema de Gestión de Condominios
+
+Este sistema busca digitalizar la administración de edificios y conjuntos residenciales, mejorando la comunicación entre residentes y administración. Incluye un microservicio de autenticación para residentes, administradores y personal de mantenimiento; un microservicio de unidades que gestiona apartamentos, espacios comunes y propietarios; un microservicio de servicios que controla mantenimiento, reparaciones y proveedores autorizados; y un microservicio de comunicaciones que centraliza anuncios, buzón de quejas y alertas comunitarias. La combinación de PostgreSQL para datos estructurados de residentes, MongoDB para documentos y comunicaciones, y Redis para notificaciones inmediatas.
+
+### 15. Plataforma de Reciclaje y Sostenibilidad
+
+Este proyecto consiste en un sistema que incentiva y facilita prácticas de reciclaje en comunidades urbanas, conectando ciudadanos, centros de acopio y autoridades municipales. El microservicio de autenticación gestiona usuarios ciudadanos, centros de reciclaje y administradores municipales; el microservicio de puntos de recolección organiza la ubicación, horarios y tipos de materiales aceptados; el microservicio de recompensas administra un sistema de puntos canjeables por beneficios; y el microservicio de educación ambiental proporciona contenido informativo y seguimiento de impactos. La arquitectura utiliza PostgreSQL para transacciones de recompensas, MongoDB para datos geolocalizados y contenido educativo, y Redis para la actualización en tiempo real de puntos acumulados.
+
 ## Proceso de Desarrollo
 
 Sigue estos pasos para comenzar tu proyecto:

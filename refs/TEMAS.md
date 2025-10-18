@@ -110,3 +110,58 @@ Microservicios:
 - Transacciones: Gestión de ventas y envíos (DB: PostgreSQL)
 - Valoraciones: Sistema de reputación y comentarios (DB: PostgreSQL)
 
+## 11. Plataforma de Gestión de Eventos Corporativos
+
+Sistema integral para planificación y ejecución de eventos corporativos.
+
+Microservicios:
+
+- Autenticación: Organizadores, proveedores y asistentes
+- Eventos: Gestión de conferencias, agendas y programas (DB: PostgreSQL)
+- Proveedores: Control de servicios de catering y logística (DB: MongoDB)
+- Inscripciones: Registro de participantes y credenciales (DB: Redis)
+
+## 12. Sistema de Monitoreo Agrícola Inteligente
+
+Plataforma para optimizar producción agrícola mediante sensores y datos.
+
+Microservicios:
+
+- Autenticación: Agricultores, técnicos y administradores
+- Cultivos: Gestión de parcelas y ciclos de producción (DB: PostgreSQL)
+- Sensores: Recolección y procesamiento de datos ambientales (DB: MongoDB)
+- Riego: Control automatizado de sistemas de irrigación (DB: Redis)
+
+## 13. Plataforma de Turismo Local
+
+Marketplace para experiencias turísticas con guías locales.
+
+Microservicios:
+
+- Autenticación: Turistas, guías locales y administradores
+- Experiencias: Gestión de tours y actividades (DB: MongoDB)
+- Reservas: Disponibilidad y confirmación de experiencias (DB: PostgreSQL)
+- Valoraciones: Sistema de opiniones y calificaciones (DB: PostgreSQL)
+
+## 14. Sistema de Gestión de Condominios
+
+Plataforma para digitalizar la administración de conjuntos residenciales.
+
+Microservicios:
+
+- Autenticación: Residentes, administradores y personal
+- Unidades: Gestión de apartamentos y espacios comunes (DB: PostgreSQL)
+- Servicios: Control de mantenimiento y reparaciones (DB: MongoDB)
+- Comunicaciones: Anuncios, quejas y alertas (DB: Redis)
+
+## 15. Plataforma de Reciclaje y Sostenibilidad
+
+Sistema para incentivar el reciclaje mediante recompensas y educación.
+
+Microservicios:
+
+- Autenticación: Ciudadanos, centros de reciclaje y municipios
+- Puntos de Recolección: Gestión de ubicaciones y materiales (DB: MongoDB)
+- Recompensas: Sistema de puntos canjeables (DB: PostgreSQL)
+- Educación: Contenido informativo y seguimiento de impacto (DB: Redis)
+
